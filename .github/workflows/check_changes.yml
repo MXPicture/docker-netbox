@@ -21,14 +21,14 @@ jobs:
         id: fetch_target_tags
         uses: mxpicture/action-docker-hub-fetch-tags@v1
         with:
-          repository: mxpicture/openwrt-rootfs
+          repository: mxpicture/netbox
           max_items: "999999"
 
       - name: Docker source tags
         id: fetch_source_tags
         uses: mxpicture/action-docker-hub-fetch-tags@v1
         with:
-          repository: openwrtorg/rootfs
+          repository: netboxcommunity/netbox
           max_items: "999999"
 
       - name: Get tags, compare docker hub image dates
