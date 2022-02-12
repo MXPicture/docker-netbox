@@ -11,7 +11,7 @@ RUN wget -q -t3 'https://packages.doppler.com/public/cli/rsa.8004D9FF50437357.ke
 
 RUN mkdir /var/lib/unit/.doppler \
       && chown -R unit:root /var/lib/unit/.doppler \
-      && chmod -R 0777 /var/lib/unit/.doppler
+      && chmod -R 0700 /var/lib/unit/.doppler
 
 ENTRYPOINT [ "/sbin/tini", "--" ]
 
