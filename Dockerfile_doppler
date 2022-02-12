@@ -16,4 +16,4 @@ RUN mkdir /var/lib/unit/.doppler \
 ENTRYPOINT [ "/sbin/tini", "--" ]
 
 # Fetch secrets and exec netbox
-CMD ["doppler", "run", "--", "/opt/netbox/docker-entrypoint.sh /opt/netbox/launch-netbox.sh"]
+CMD ["doppler", "run", "--", "/opt/netbox/docker-entrypoint.sh", "/opt/netbox/launch-netbox.sh"]
