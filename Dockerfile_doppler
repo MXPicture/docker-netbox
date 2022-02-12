@@ -12,4 +12,4 @@ RUN wget -q -t3 'https://packages.doppler.com/public/cli/rsa.8004D9FF50437357.ke
 ENTRYPOINT [ "/sbin/tini", "--" ]
 
 # Fetch secrets and exec netbox
-CMD ["doppler", "run", "--", "/opt/netbox/docker-entrypoint.sh", "/opt/netbox/launch-netbox.sh"]
+CMD ["doppler", "run", "--", "/opt/netbox/docker-entrypoint.sh /opt/netbox/launch-netbox.sh"]
